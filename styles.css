@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* ============= GLOBAL CSS =============== */
 :root {
   /* dark shades of primary color*/
@@ -356,6 +363,8 @@ input:checked + .drop + .links-container {
 @media (pointer: none), (pointer: coarse) {
   header {
     min-height: 100vh;
+    background: -o-linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+      url(./images/hero.jpg) center/cover no-repeat;
     background: -webkit-gradient(
         linear,
         left top,
@@ -363,8 +372,6 @@ input:checked + .drop + .links-container {
         from(rgba(63, 208, 212, 0.5)),
         to(rgba(0, 0, 0, 0.7))
       ),
-      url(./images/hero.jpg) center/cover no-repeat;
-    background: -o-linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
       url(./images/hero.jpg) center/cover no-repeat;
     background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
       url(./images/hero.jpg) center/cover no-repeat;
@@ -475,6 +482,10 @@ header::after {
   background-color: var(--clr-white);
   padding: 0 1rem;
   border-bottom-left-radius: 50%;
+  border-top-right-radius: var(--radius);
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
 }
 .about-us:hover .github {
   color: var(--clr-white);
